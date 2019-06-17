@@ -10,6 +10,7 @@ func PrintCombN(n int){
 		increment(nb, len(nb)-1, last, true)
 	}
 	printnb(last,last)
+	fmt.Print("\n")
 }
 
 func firstnumber(n int) []int{
