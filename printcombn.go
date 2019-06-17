@@ -1,69 +1,81 @@
 package piscine
 
-import "github.com/01-edu/z01"
+import "fmt"
 
-func print(i int) {
-	z01.PrintRune(rune(i) + '0')
+func PrintCombN(n int){
+	nb:=firstnumber(n)
+	last:=lastnumber(n)
+	for !same(nb,last){
+		printnb(nb,last)
+		increment(nb, len(nb)-1, last, true)
+	}
+	printnb(last,last)
 }
 
-func show(n int, tab [9]int, max [9]int) {
-	i := 0
-	for i < n {
-		print(tab[i])
-		i++
+func firstnumber(n int) []int{
+	nb:=make([]int,n)
+	for i:=range nb{
+		nb[i]=i
 	}
-	if tab[0] != max[0] {
-		z01.PrintRune(',')
-		z01.PrintRune(' ')
-	}
+	return nb
 }
 
-func combinaison1() {
-	tab := [9]int{0}
-	max := [9]int{9}
-	for tab[0] <= max[0] {
-		show(1, tab, max)
-		tab[0]++
+func lastnumber(n int) []int{
+	nb:=make([]int,n)
+	j:=10-n
+	for i:=range nb{
+		nb[i]=j
+		j++
 	}
+	return nb
 }
 
-func PrintCombN(n int) {
-	tab := [9]int{0, 1, 2, 3, 4, 5, 6, 7, 8}
-	max := [9]int{}
-
-	if n == 1 {
-		combinaison1()
-	} else {
-		i := n - 1
-		j := 9
-		for i >= 0 {
-			i--
-			j--
-			max[i] = j
+func printnb(nb []int, max []int){
+	if same(nb,max){
+		for i:= range nb{
+			fmt.Printf("%d",nb[i])		
 		}
-		i = n - 1
-		for tab[0] < max[0] {
-			if tab[i] != max[i] {
-				show(n, tab, max)
-				tab[i]++
-			}
-			if tab[i] == max[i] {
-				if tab[i-1] != max[i-1] {
-					show(n, tab, max)
-					tab[i-1]++
-					j = i
-					for j < n {
-						tab[j] = tab[j-1] + 1
-						j++
-					}
-					i = n - 1
+	}else{
+		for i:= range nb{
+			fmt.Printf("%d",nb[i])		
+		}
+		fmt.Print(", ")
+	}
+}
+
+func same(a, b []int) bool {
+        if len(a) != len(b) {
+                return false
+        }
+        for i, v := range a {
+                if v != b[i] {
+                        return false
+                }
+        }
+        return true
+}
+
+func increment(nb []int, index int, lastnumber []int, do bool) {	
+	if nb[index]!=lastnumber[index]{
+		nb[index]++
+	}else{
+		if index!=0{
+			if nb[index-1]!=lastnumber[index-1]{
+				if do{
+					nb[index-1]++
 				}
-			}
-			for tab[i] == max[i] && tab[i-1] == max[i-1] && i > 1 {
-				i--
+				nb[index]=nb[index-1]+1		
+			}else{	
+				increment(nb,index-1,lastnumber,true)
 			}
 		}
-		show(n, tab, max)
+		if index<len(nb)-1{
+			if nb[index+1]!=nb[index]+1{	
+				increment(nb,index+1,lastnumber,false)
+			}		
+		}
 	}
-	z01.PrintRune('\n')
 }
+
+
+
