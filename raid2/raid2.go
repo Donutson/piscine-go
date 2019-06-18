@@ -10,9 +10,16 @@ import (
 
 func main() {
 	
+	good:=true
 	param:=strings.Join(os.Args[1:],"")
+	for i:=1;i<len(os.Args[1:]);i++{
+		if len(os.Args[i])!=9{
+			good=false
+			break
+		}
+	}
 
-	if iscorrectparam(param){
+	if iscorrectparam(param) && good{
 		board := parseInput(param)
 		if backtrack(&board) {
 			printBoard(board)
