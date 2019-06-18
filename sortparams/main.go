@@ -7,7 +7,6 @@ import (
 func main(){
 	args:=os.Args[1:]
 	args=sortascii(args)
-	fmt.Println(args)
 	for i:=range args{
 		fmt.Println(args[i])
 	}	
