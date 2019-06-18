@@ -119,7 +119,7 @@ func hasDuplicates(counter [10]int) bool {
 func printBoard(board [9][9]int) {
 	for row := 0; row < 9; row++ {
 		for col := 0; col < 9; col++ {
-			fmt.Printf("%d ", board[row][col])
+			fmt.Printf("%d", board[row][col])
 		}
 		if row == 2 || row == 5 || row == 8 {
 			fmt.Print("\n")
