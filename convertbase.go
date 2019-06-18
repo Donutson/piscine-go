@@ -8,12 +8,12 @@ func ConvertBase(nbr, baseFrom, baseTo string) string{
 }
 
 func PrintNbrBase1(n int,base string) string{//convertir un int dans une base et retourne le string de celui-ci
+	str:=""
 	if len(base)<2 || !uniquealphaandnosigne(base){
 		fmt.Print("NV")	
 	}else if base=="0123456789"{
 		return strconv.Itoa(n)
 	}else{
-		str:=""
 		if n<0{
 			n=-n
 			str=Concat(str,"-")
