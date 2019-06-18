@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 func AtoiBase(s string,base string) int{//convertir un int dans une base et retourne le string de celui-ci
 	if len(base)<2 || !uniquealphaandnosigne(base){
 		return 0
