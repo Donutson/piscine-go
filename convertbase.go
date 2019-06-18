@@ -1,6 +1,7 @@
 package piscine
 
-import "strings"
+import "strconv"
+import "fmt"
 
 func ConvertBase(nbr, baseFrom, baseTo string) string{
 	return PrintNbrBase1(AtoiBase(nbr,baseFrom),baseTo)
@@ -10,7 +11,7 @@ func PrintNbrBase1(n int,base string) string{//convertir un int dans une base et
 	if len(base)<2 || !uniquealphaandnosigne(base){
 		fmt.Print("NV")	
 	}else if base=="0123456789"{
-		return strings.Itoa(n)
+		return strconv.Itoa(n)
 	}else{
 		str:=""
 		if n<0{
@@ -24,5 +25,6 @@ func PrintNbrBase1(n int,base string) string{//convertir un int dans une base et
 		}
 		return str
 	}
+	return str
 }
 
