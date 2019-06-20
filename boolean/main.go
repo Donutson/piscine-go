@@ -14,6 +14,7 @@ func printStr(str string) {
 	z01.PrintRune('\n')
 }
 
+
 func isEven(nbr int) bool {
 	if even(nbr){
 		return true
