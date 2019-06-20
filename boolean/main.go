@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/01-edu/Z01"
+	//"github.com/01-edu/Z01"
 	"os"
 	)
 
