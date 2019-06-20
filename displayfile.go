@@ -18,8 +18,8 @@ func read(filename string) string {
     return string(data)
 }
 
-func checkFile(){
-filename:=os.Args
+func main() {
+	filename:=os.Args
 	if len(filename)==1{
 		fmt.Println("File name missing")
 	}else if len(filename)>2{
@@ -28,9 +28,5 @@ filename:=os.Args
 		data:=read(filename[1])
 		fmt.Print(data)
 	}
-}
-
-func main() {
-	
 }
 
