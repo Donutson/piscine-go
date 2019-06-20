@@ -8,7 +8,7 @@ import (
 
 func check(e error) {
     if e != nil {
-        fmt.Print(e)
+        fmt.Println(e)
     }
 }
 
