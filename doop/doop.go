@@ -61,6 +61,11 @@ func iscorrectfordoop(param []string) bool{
 
 func isnumeric(s string) bool{
 	cbstr:=[]rune(s)
+	if s[0]==45{
+		if isnumeric(s[1:]){
+			return true
+		}
+	}
 	for i,_:=range cbstr{	
 		if !(cbstr[i]>=48 && cbstr[i]<=57){
 			return false
