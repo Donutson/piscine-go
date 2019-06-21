@@ -1,7 +1,7 @@
 package piscine
 
 func ForEach(f func(int), arr []int) {
-	for i:=arr{
+	for _,i:=arr{
 		f(i)
 	}
 }
