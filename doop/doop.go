@@ -53,9 +53,20 @@ func main(){
 }
 
 func iscorrectfordoop(param []string) bool{
-	if (!IsNumeric(param[0]) || !IsNumeric(param[2])) || (param[1]!=string(byte(43)) && param[1]!=string(byte(42)) && param[1]!=string(byte(47)) && param[1]!=string(byte(37)) && param[1]!=string(byte(45))){
+	if (!isnumeric(param[0]) || !isnumeric(param[2])) || (param[1]!=string(byte(43)) && param[1]!=string(byte(42)) && param[1]!=string(byte(47)) && param[1]!=string(byte(37)) && param[1]!=string(byte(45))){
 		return false
 	}
+	return true
+}
+
+func isnumeric(s string) bool{
+	cbstr:=[]rune(s)
+	for i,_:=range cbstr{	
+		if !(cbstr[i]>=48 && cbstr[i]<=57){
+			return false
+		}
+	}
+	
 	return true
 }
 
