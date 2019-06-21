@@ -16,10 +16,11 @@ func SortWordArr(array []string) {
 }
 
 func comparearrayascii(a, b []byte)bool{
+	n:=0
 	if len(a)<=len(b){
-		n:=len(a)	
+		n=len(a)	
 	}else{
-		n:=len(b)
+		n=len(b)
 	}
 	for i:=0;i<n;i++{
 		if b[i]<a[i]{
