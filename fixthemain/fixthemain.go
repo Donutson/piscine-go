@@ -5,11 +5,11 @@ import "fmt"
 type Door struct{
 	state bool
 }
-const OPEN = true
-const CLOSE =false
+const OPEN = false
+const CLOSE =true
 
 func OpenDoor(ptrDoor *Door){
-	fmt.Println("Door Openning...")
+	fmt.Println("Door Opening...")
 	ptrDoor.state = OPEN
 }
 
@@ -19,12 +19,12 @@ func CloseDoor(ptrDoor *Door){
 }
 
 func IsDoorOpen(ptrDoor Door) bool {
-	fmt.Println("is the Door opened ?")
+	fmt.Println("Door is open ?")
 	return ptrDoor.state
 }
 
 func IsDoorClose(ptrDoor Door) bool {
-	fmt.Println("is the Door closed ?")
+	fmt.Println("Door is close ?")
 	return ptrDoor.state
 }
 
