@@ -14,7 +14,7 @@ func OpenDoor(ptrDoor *Door){
 }
 
 func CloseDoor(ptrDoor *Door){
-	fmt.Println("Door Closing...")
+	fmt.Println("Door closing...")
 	ptrDoor.state = CLOSE
 }
 
