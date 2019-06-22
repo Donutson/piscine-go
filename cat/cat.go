@@ -9,6 +9,7 @@ import (
 func check(e error) {
     if e != nil {
         fmt.Print(e)
+	break
     }
 }
 
@@ -23,6 +24,7 @@ func main() {
 	if len(filename)==1{
 		fmt.Print()
 	}else{
+		
 		for i:=1;i<len(filename);i++{
 			data:=read(filename[1])
 			fmt.Println(data)
