@@ -1,14 +1,14 @@
 package piscine
 
 func Unmatch(arr []int) int {
-	result:=0
+	result:=4
 	for i:=range arr{
 		if !ispair(arr[i],i, arr){
 			result=arr[i]
 			return result		
 		}
 	}
-	return result	
+	return result
 }
 
 func ispair(elt,index int, arr[]int) bool{
