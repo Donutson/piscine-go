@@ -8,7 +8,7 @@ import (
 
 func check(e error) {
     if e != nil {
-        fmt.Println(e)
+        fmt.Print(e)
     }
 }
 
@@ -21,7 +21,7 @@ func read(filename string) string {
 func main() {
 	filename:=os.Args
 	if len(filename)==1{
-		fmt.Println("File name missing")
+		fmt.Print()
 	}else{
 		for i:=1;i<len(filename);i++{
 			data:=read(filename[1])
