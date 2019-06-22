@@ -1,4 +1,4 @@
-package piscine
+package main
 
 const AIRCRAFT1=1
 type Pilot struct{
