@@ -1,5 +1,7 @@
 package piscine
 
+import "math"
+
 func CollatzCountdown(start int) int {
 	count:=0
 	for start!=1{
@@ -9,6 +11,9 @@ func CollatzCountdown(start int) int {
 		}
 		start=start*3+1
 		count++
+		if start> math.MaxInt32{
+			return count
+		}
 	}
 	return count
 }
