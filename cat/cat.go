@@ -6,14 +6,11 @@ import (
     "os"
 )
 
-func check(e error)(error,bool) {
-   return e, true
-}
+
 
 func read(filename string) (string, error, bool) {
     data, err := ioutil.ReadFile(filename)
-    e,fa:=check(err)
-    return string(data), e, fa
+    return string(data), err, true
 }
 
 func main() {
