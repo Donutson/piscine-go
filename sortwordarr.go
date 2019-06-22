@@ -7,9 +7,9 @@ func SortWordArr(array []string) {
 			a:=[]byte(array[j])
 			b:=[]byte(array[i])
 			if comparearrayascii(a, b){
-				ech=array[j]
-				array[j]=array[i]
-				array[i]=ech
+				ech=array[i]
+				array[i]=array[j]
+				array[j]=ech
 			}
 		}
 	}
