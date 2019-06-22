@@ -15,7 +15,7 @@ func main(){
 const AIRCRAFT1=1
 type Pilot struct{
 	Name string
-	Age int
 	Life int
+	Age int
 	Aircraft int
 }
