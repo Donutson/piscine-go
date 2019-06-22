@@ -7,15 +7,15 @@ func SortWordArr(array []string) {
 			a:=[]byte(array[j])
 			b:=[]byte(array[i])
 			if comparearrayascii(a, b){
-				ech=array[i]
-				array[i]=array[j]
-				array[j]=ech
+				ech=array[j]
+				array[j]=array[i]
+				array[i]=ech
 			}
 		}
 	}
 }
 
-func comparearrayascii(a, b []byte)bool{
+func comparearrayascii(a, b []byte)bool{//vérifie si a est inferieur à b
 	n:=0
 	if len(a)<=len(b){
 		n=len(a)	
