@@ -6,17 +6,18 @@ import (
     "os"
 )
 
-func check(e error) {
+func check(e error) bool {
     if e != nil {
         fmt.Print(e)
-	break
+	return true
     }
+	return false
 }
 
-func read(filename string) string {
+func read(filename string) (string, bool) {
     data, err := ioutil.ReadFile(filename)
-    check(err)
-    return string(data)
+    a:=check(err)
+    return string(data), a
 }
 
 func main() {
@@ -26,8 +27,11 @@ func main() {
 	}else{
 		
 		for i:=1;i<len(filename);i++{
-			data:=read(filename[1])
+			data, a:=read(filename[1])
 			fmt.Println(data)
+			if a{
+				break			
+			}
 		}
 		
 	}
