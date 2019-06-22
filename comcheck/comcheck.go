@@ -7,8 +7,6 @@ func main(){
 	param:=os.Args
 	if iscorrectconcheck(param){
 		fmt.Println("Alert!!!")	
-	}else{
-		fmt.Println()
 	}
 }
 
