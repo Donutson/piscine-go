@@ -7,10 +7,10 @@ import (
 )
 
 func check(e error)(error,bool) {
-   return e,true
+   return e, true
 }
 
-func read(filename string) string, error, bool {
+func read(filename string) (string, error, bool) {
     data, err := ioutil.ReadFile(filename)
     e,fa:=check(err)
     return string(data), e, fa
