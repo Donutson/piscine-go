@@ -1,7 +1,7 @@
 package piscine
 
 func Rot14(str string) string {
-	bstr:=[]byte{str}
+	bstr:=[]byte(str)
 	for i:= range bstr{
 		bstr[i]+=14
 	}
