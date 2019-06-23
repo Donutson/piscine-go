@@ -3,25 +3,12 @@ package main
 import (
 	"fmt"
 	"os"
-	"io/ioutil"
 	)
 
-func check(e error) {
-    if e != nil {
-        fmt.Println(e)
-    }
-}
-
-func read(filename string) string {
-    data, err := ioutil.ReadFile(filename)
-    check(err)
-    return string(data)
-}
 
 func main(){
 	
-		data:=read("raid1a.go")
-		fmt.Println(data)
+		fmt.Println("[raid1a] [1] [12] || [raid1b] [1] [12] || [raid1c] [1] [12] || [raid1d] [1] [12] || [raid1e] [1] [12]")
 	
 }
 
