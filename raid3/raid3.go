@@ -6,7 +6,7 @@ import (
 	)
 
 func main(){
-	param:=os.Args
+	param:=os.Args[1]
 	fmt.Println(param)
 }
 
