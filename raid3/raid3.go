@@ -6,7 +6,10 @@ import (
 	)
 
 func main(){
-	param,_:=ioutil.ReadFile("raid1a/raid1a.go")
+	param,e:=ioutil.ReadFile("raid1a/raid1a.go")
+	if e!=nil{
+		fmt.Println(e)
+	}
 	fmt.Println(string(param))
 }
 
