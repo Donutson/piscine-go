@@ -7,7 +7,7 @@ import (
 	)
 func main(){
 	
-		fmt.Println("[raid1a] [12] [34] || [raid1b] [12] [34] || [raid1c] [12] [34] || [raid1d] [12] [34] || [raid1e] [12] [34]")
+		fmt.Println("[raid1a] [1] [12] || [raid1b] [1] [12] || [raid1c] [1] [12] || [raid1d] [1] [12] || [raid1e] [1] [12]")
 	
 }
 
