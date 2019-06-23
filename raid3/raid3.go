@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	piscine ".."
+	"os"
 	)
 
 func main(){
-	fmt.Println("boj")
-	piscine.Raid1a(5,1)	
+	param:=os.Args
+	fmt.Println(param)
 }
 
