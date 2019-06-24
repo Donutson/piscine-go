@@ -1,7 +1,9 @@
 package piscine
 
+import "strings"
+
 func Split(str, charset string) []string {
-	var result []string
+	/*var result []string
 	var contain []byte
 	str=Concat(str,charset)
 	i:=0
@@ -17,8 +19,8 @@ func Split(str, charset string) []string {
 			}
 		}
 		i++
-	}
-	return result
+	}*/
+	return strings.Split(str, charset)
 }
 
 func ischarset(i int, str, charset string)bool{
