@@ -21,14 +21,13 @@ func ListPushBack(l *List, data interface{}) {
         }else{
 		listItem := l.Tail
         
-        	
+        	//parcours pour se mettre a la fin de la list
         	for listItem.Next != nil {
             		listItem = listItem.Next
         	}
         
-        	
+        	//enregistrement du dernier element a la liste
         	listItem.Next = n
         	l.Tail = n
 	}
 }
-
