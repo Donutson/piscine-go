@@ -9,6 +9,7 @@ func ListClear(l *List) {
 			l.Head=l.Head.Next
 			old.Next=nil
 		}
+		l.Head=nil
 	}
 }
 
@@ -20,4 +21,3 @@ func PrintList(l *List) {
 	}
 	fmt.Println(nil)
 }
-
