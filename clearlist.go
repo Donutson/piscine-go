@@ -1,5 +1,7 @@
 package piscine
 
+import "fmt"
+
 func ListClear(l *List) {
 	if l.Head!=nil{
 		for l.Head.Next!=nil{
