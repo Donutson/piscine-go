@@ -8,8 +8,8 @@ func ListFind(l *List, ref interface{}, comp func(a, b interface{}) bool) *inter
 	if l.Head!=nil{
 		cl:=l.Head
 		for cl.Next!=nil{
-			if comp(cl.Data,ref){
-				return cl
+			if comp(*cl.Data,ref){
+				return cl.Data
 			}
 			cl=cl.Next
 		}
