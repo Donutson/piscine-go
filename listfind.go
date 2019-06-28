@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main(){
-
-}
+package piscine
 
 func CompStr(a, b interface{}) bool {
 	return a == b
