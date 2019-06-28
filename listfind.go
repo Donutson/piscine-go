@@ -9,12 +9,12 @@ func ListFind(l *List, ref interface{}, comp func(a, b interface{}) bool) *inter
 		cl:=l.Head
 		for cl.Next!=nil{
 			if comp(cl.Data,ref){
-				return *cl.Data
+				return &cl.Data
 			}
 			cl=cl.Next
 		}
 		if comp(cl.Data,ref){
-			return *cl.Data
+			return &cl.Data
 		}
 	}
 	return nil
