@@ -4,12 +4,12 @@ func ListForEachIf(l *List, f func(*NodeL), cond func(*NodeL) bool) {
 	if l.Head!=nil{
 		cl:=l.Head
 		for cl.Next!=nil{
-			if !cond(cl){
+			if cond(cl){
 				f(cl)
 			}
 			cl=cl.Next
 		}
-		if !cond(cl){
+		if cond(cl){
 			f(cl)
 		}
 	}
