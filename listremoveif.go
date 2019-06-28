@@ -10,9 +10,6 @@ func ListRemoveIf(l *List, data_ref interface{}) {
 			}
 			cl=cl.Next
 		}
-		if cl.Next.Data==data_ref{
-			cl.Next=cl.Next.Next
-		}
 	}
 }
 
