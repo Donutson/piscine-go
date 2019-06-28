@@ -2,7 +2,14 @@ package piscine
 
 
 func ListRemoveIf(l *List, data_ref interface{}) {
-	if l.Head!=nil{
+		for l.Head!=nil{
+			if l.Head.Data==data_ref{
+				l.Head=l.Head.Next
+			}else{
+				break
+			}		
+		}
+	/*if l.Head!=nil{
 		cl:=l.Head
 		for cl.Next!=nil{
 			if cl.Next.Data==data_ref{
@@ -10,6 +17,6 @@ func ListRemoveIf(l *List, data_ref interface{}) {
 			}
 			cl=cl.Next
 		}
-	}
+	}*/
 }
 
