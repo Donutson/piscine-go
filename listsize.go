@@ -3,8 +3,9 @@ package piscine
 func ListSize(l *List) int {
 	if l.Head!=nil{
 		count:=1
-		for l.Head.Next!=nil{
-			l.Head=l.Head.Next
+		cl=l.Head
+		for cl.Next!=nil{
+			cl=cl.Next
 			count++
 		}
 		return count
