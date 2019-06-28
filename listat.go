@@ -5,17 +5,16 @@ func ListAt(l *NodeL, pos int) *NodeL{
 		return nil
 	}
 	count:=0
-	
+	cl:=l
 	if l!=nil{
-		cl:=l
-		for cl.Next!=nil && count<pos{
-			cl=cl.Next
+		for l.Next!=nil && count<pos{
+			l=l.Next
 			count++
 		}
 		if pos-count>0{
 			return nil
 		}
-		return cl
+		return l
 	}
 	return nil
 }
